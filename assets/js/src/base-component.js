@@ -1,0 +1,1 @@
+import Data from"./dom/data";const VERSION="5.0.0-beta2";class BaseComponent{constructor(t){t&&(this._element=t,Data.setData(t,this.constructor.DATA_KEY,this))}dispose(){Data.removeData(this._element,this.constructor.DATA_KEY),this._element=null}static getInstance(t){return Data.getData(t,this.DATA_KEY)}static get VERSION(){return VERSION}}export default BaseComponent;
